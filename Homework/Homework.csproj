@@ -101,6 +101,12 @@
       <DependentUpon>03. FrmEmployee_Genetics.cs</DependentUpon>
     </Compile>
     <Compile Include="1013 FrmStudent\clsStudent.cs" />
+    <Compile Include="1013 FrmStudent\FrmUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="1013 FrmStudent\FrmUpdate.Designer.cs">
+      <DependentUpon>FrmUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="1015 FrmPictureViewer\04. FrmDragDrop.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +153,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="1013 FrmStudent\03. FrmEmployee_Genetics.resx">
       <DependentUpon>03. FrmEmployee_Genetics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="1013 FrmStudent\FrmUpdate.resx">
+      <DependentUpon>FrmUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="1015 FrmPictureViewer\04. FrmDragDrop.resx">
       <DependentUpon>04. FrmDragDrop.cs</DependentUpon>

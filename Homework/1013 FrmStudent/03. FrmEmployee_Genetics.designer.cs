@@ -59,6 +59,7 @@
             this.Addstu = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.textbox5 = new System.Windows.Forms.TextBox();
+            this.button8 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -113,9 +114,9 @@
             this.toolStripButton12,
             this.toolStripButton13,
             this.toolStripButton14});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 65);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 66);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(822, 26);
+            this.toolStrip1.Size = new System.Drawing.Size(822, 25);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -125,7 +126,7 @@
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(118, 23);
+            this.toolStripButton1.Size = new System.Drawing.Size(98, 22);
             this.toolStripButton1.Text = "Add Student";
             this.toolStripButton1.ToolTipText = "Add Employee";
             this.toolStripButton1.Click += new System.EventHandler(this.Addstu_Click);
@@ -135,7 +136,7 @@
             this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(97, 23);
+            this.toolStripButton2.Size = new System.Drawing.Size(78, 22);
             this.toolStripButton2.Text = "Summery";
             this.toolStripButton2.Click += new System.EventHandler(this.Summery_Click);
             // 
@@ -144,7 +145,7 @@
             this.toolStripButton10.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton10.Image")));
             this.toolStripButton10.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton10.Name = "toolStripButton10";
-            this.toolStripButton10.Size = new System.Drawing.Size(68, 23);
+            this.toolStripButton10.Size = new System.Drawing.Size(56, 22);
             this.toolStripButton10.Text = "Insert";
             this.toolStripButton10.Click += new System.EventHandler(this.Insert_Click);
             // 
@@ -153,7 +154,7 @@
             this.toolStripButton11.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton11.Image")));
             this.toolStripButton11.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton11.Name = "toolStripButton11";
-            this.toolStripButton11.Size = new System.Drawing.Size(86, 23);
+            this.toolStripButton11.Size = new System.Drawing.Size(70, 22);
             this.toolStripButton11.Text = "Remove";
             this.toolStripButton11.Click += new System.EventHandler(this.Remove_Click);
             // 
@@ -162,7 +163,7 @@
             this.toolStripButton12.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton12.Image")));
             this.toolStripButton12.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton12.Name = "toolStripButton12";
-            this.toolStripButton12.Size = new System.Drawing.Size(145, 23);
+            this.toolStripButton12.Size = new System.Drawing.Size(112, 22);
             this.toolStripButton12.Text = "20 Random Add";
             this.toolStripButton12.Click += new System.EventHandler(this.Add20Random_Click);
             // 
@@ -171,7 +172,7 @@
             this.toolStripButton13.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton13.Image")));
             this.toolStripButton13.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton13.Name = "toolStripButton13";
-            this.toolStripButton13.Size = new System.Drawing.Size(136, 23);
+            this.toolStripButton13.Size = new System.Drawing.Size(106, 22);
             this.toolStripButton13.Text = "1 Random Add";
             this.toolStripButton13.Click += new System.EventHandler(this.Add1Random_Click);
             // 
@@ -180,7 +181,7 @@
             this.toolStripButton14.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton14.Image")));
             this.toolStripButton14.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton14.Name = "toolStripButton14";
-            this.toolStripButton14.Size = new System.Drawing.Size(65, 23);
+            this.toolStripButton14.Size = new System.Drawing.Size(54, 22);
             this.toolStripButton14.Text = "Clear";
             this.toolStripButton14.Click += new System.EventHandler(this.Clear_Click);
             // 
@@ -195,6 +196,7 @@
             // splitContainer2.Panel1
             // 
             this.splitContainer2.Panel1.AutoScroll = true;
+            this.splitContainer2.Panel1.Controls.Add(this.button8);
             this.splitContainer2.Panel1.Controls.Add(this.button2);
             this.splitContainer2.Panel1.Controls.Add(this.label5);
             this.splitContainer2.Panel1.Controls.Add(this.textBox6);
@@ -238,7 +240,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(11, 215);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(110, 22);
+            this.label5.Size = new System.Drawing.Size(83, 17);
             this.label5.TabIndex = 19;
             this.label5.Text = "Remove No.";
             // 
@@ -246,15 +248,17 @@
             // 
             this.textBox6.Location = new System.Drawing.Point(125, 212);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(118, 28);
+            this.textBox6.Size = new System.Drawing.Size(118, 24);
             this.textBox6.TabIndex = 18;
+            this.textBox6.Click += new System.EventHandler(this.textBox6_TextChanged);
+            this.textBox6.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox_MouseClick);
             this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(126, 171);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(117, 28);
+            this.textBox4.Size = new System.Drawing.Size(117, 24);
             this.textBox4.TabIndex = 17;
             this.textBox4.Text = "0";
             this.textBox4.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox_MouseClick);
@@ -297,7 +301,7 @@
             this.textBox3.Location = new System.Drawing.Point(125, 130);
             this.textBox3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(118, 28);
+            this.textBox3.Size = new System.Drawing.Size(118, 24);
             this.textBox3.TabIndex = 13;
             this.textBox3.Text = "0";
             this.textBox3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox_MouseClick);
@@ -307,7 +311,7 @@
             this.textBox2.Location = new System.Drawing.Point(125, 89);
             this.textBox2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(118, 28);
+            this.textBox2.Size = new System.Drawing.Size(118, 24);
             this.textBox2.TabIndex = 11;
             this.textBox2.Text = "0";
             this.textBox2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox_MouseClick);
@@ -318,7 +322,7 @@
             this.label4.Location = new System.Drawing.Point(41, 174);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 22);
+            this.label4.Size = new System.Drawing.Size(41, 17);
             this.label4.TabIndex = 10;
             this.label4.Text = "Math";
             // 
@@ -339,7 +343,7 @@
             this.label3.Location = new System.Drawing.Point(35, 133);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 22);
+            this.label3.Size = new System.Drawing.Size(53, 17);
             this.label3.TabIndex = 8;
             this.label3.Text = "English";
             // 
@@ -349,7 +353,7 @@
             this.label2.Location = new System.Drawing.Point(33, 92);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 22);
+            this.label2.Size = new System.Drawing.Size(57, 17);
             this.label2.TabIndex = 6;
             this.label2.Text = "Chinese";
             // 
@@ -359,7 +363,7 @@
             this.label1.Location = new System.Drawing.Point(39, 51);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 22);
+            this.label1.Size = new System.Drawing.Size(45, 17);
             this.label1.TabIndex = 4;
             this.label1.Text = "Name";
             // 
@@ -368,7 +372,7 @@
             this.textBox1.Location = new System.Drawing.Point(125, 48);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(118, 28);
+            this.textBox1.Size = new System.Drawing.Size(118, 24);
             this.textBox1.TabIndex = 3;
             this.textBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox_MouseClick);
             // 
@@ -413,13 +417,23 @@
             this.textbox5.Multiline = true;
             this.textbox5.Name = "textbox5";
             this.textbox5.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textbox5.Size = new System.Drawing.Size(524, 545);
+            this.textbox5.Size = new System.Drawing.Size(528, 545);
             this.textbox5.TabIndex = 11;
             this.textbox5.WordWrap = false;
             // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(168, 270);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(75, 30);
+            this.button8.TabIndex = 21;
+            this.button8.Text = "Update";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
             // FrmStudent
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(824, 645);
@@ -477,5 +491,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button8;
     }
 }

@@ -15,10 +15,10 @@ namespace Lab_02__Y_
 {
     public partial class FrmStudent : Form
     {
-        int No_ = 1;
-        int C, E, M,totalstu_num;
-        int highestCh=0, highestEn=0, highestMa=0;
-        List<clsStudent> stuList = new List<clsStudent>();
+        internal int No_ = 1;
+        internal int C, E, M, totalstu_num;
+        internal int highestCh, highestEn, highestMa;
+        internal List<clsStudent> stuList = new List<clsStudent>();
         List<string> name = new List<string>(){"Zoey","Tony","Adam","Isabel","Linda","Harriet","Natasha","Dora",
             "Marian","Tonya","Yolanda","Vivian","Paula","Rachel","Christina","Karen","Upton","Sam","Quentin","Fabian",
             "Antony","Edward","Miranda","Wesley","Joyce","Xenia","Addison","Ryan","Aidan","Wilson","Colin","Damon","Kenny",
@@ -161,7 +161,7 @@ namespace Lab_02__Y_
         void heighest()
         {
             #region 歸零
-                //每次開始前先歸零
+            //每次開始前先歸零
             highestCh = 0;
             highestEn = 0;
             highestMa = 0;
@@ -233,13 +233,16 @@ namespace Lab_02__Y_
         private void textBox6_TextChanged(object sender, EventArgs e)
         {
             this.toolStripButton11.Enabled = true;
-            //int t;
-            //int.TryParse(this.textBox6.Text, out t);
-            //if (t <= this.stuList.Count - 1)
-            //{                
-            //    this.stuList.RemoveAt(t);
-
-            //}
+           
+        }
+        FrmUpdate f = new FrmUpdate();
+        private void button8_Click(object sender, EventArgs e)
+        {
+            if (f.IsDisposed == true)
+            {
+                f = new FrmUpdate();
+            }
+            f.Show();
         }
 
     
