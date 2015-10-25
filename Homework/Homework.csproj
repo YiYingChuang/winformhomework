@@ -101,7 +101,6 @@
       <DependentUpon>03. FrmEmployee_Genetics.cs</DependentUpon>
     </Compile>
     <Compile Include="1013 FrmStudent\clsStudent.cs" />
-    <Compile Include="1013 FrmStudent\cls_remove.cs" />
     <Compile Include="1015 FrmPictureViewer\04. FrmDragDrop.cs">
       <SubType>Form</SubType>
     </Compile>
