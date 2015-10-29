@@ -23,38 +23,10 @@ namespace Lab_02__Y_
             {
                 x.MouseDown += Source_pictureBox_MouseDown;
             }
-
-            this.textBox1.AllowDrop = true;
-            this.textBox1.DragEnter += textBox1_DragEnter;
-            this.textBox1.DragDrop += textBox1_DragDrop;
+                        
         }
 
-        void textBox1_DragDrop(object sender, DragEventArgs e)
-        {
-            if (e.Data.GetDataPresent(DataFormats.FileDrop))
-            {
-                string[] filenames = (string[])e.Data.GetData(DataFormats.FileDrop);
-                
-
-                OpenFile(filenames[0]);
-            }
-        }
-
-        private void OpenFile(string filename)
-        {
-            StreamReader sr = new StreamReader(filename , Encoding.Default);
-            this.textBox1.Text = sr.ReadToEnd();
-            sr.Close();// 關閉 System.IO.StreamReader 物件和基礎資料流，並釋放任何與讀取器 (Reader) 相關聯的系統資源。
-            sr.Dispose();//釋放 System.IO.TextReader 物件所使用的所有資源。
-        }
-
-
-
-        void textBox1_DragEnter(object sender, DragEventArgs e)
-        {
-            e.Effect = DragDropEffects.Copy;
-        }
-
+       
         private void Source_pictureBox_MouseDown(object sender, MouseEventArgs e)
         {
             //this.DoDragDrop(((PictureBox)sender).Image, DragDropEffects.Copy);
@@ -67,6 +39,7 @@ namespace Lab_02__Y_
             }
         }
 
+        
         void pictureBox1_DragDrop(object sender, DragEventArgs e)
         {
             //MessageBox.Show("Drag Drop!");
@@ -78,16 +51,12 @@ namespace Lab_02__Y_
             else if (e.Data.GetDataPresent(DataFormats.Bitmap))
             {
                 this.pictureBox1.Image = (Image)e.Data.GetData(DataFormats.Bitmap);
-
             }
-
         }
 
         void pictureBox1_DragEnter(object sender, DragEventArgs e)
         {
             e.Effect = DragDropEffects.Copy;
-
-           
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -99,10 +68,42 @@ namespace Lab_02__Y_
         {
 
         }
-
+        List<Control> ShowPicture = new List<Control>();
+        void show_picturebox()
+        {
+            ShowPicture.Clear();
+            foreach (Control x in this.flowLayoutPanel1.Controls)
+            {
+                ShowPicture.Add(x);
+            }
+            for (int i = 0; i < ShowPicture.Count; i++)
+            {
+               this.pictureBox1.Image = ((PictureBox)ShowPicture[i]).Image;  
+            }
+        }
+        void AddPicturebox()
+        { 
+            for (int i = 0; i < this.s.Count ; i++)
+			{
+                PictureBox p = new PictureBox();
+                p.Width = 120;
+                p.Height = 90;
+                p.SizeMode = PictureBoxSizeMode.StretchImage;
+                p.Image = Image.FromFile(s[i]);
+                this.flowLayoutPanel1.Controls.Add(p);
+			}
+         
+        }
+        List<string> s = new List<string>();
         private void button1_Click(object sender, EventArgs e)
         {
-
+            if (this.openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                //TODO...開項目數目
+                s.Add(this.openFileDialog1.FileName);
+                this.AddPicturebox();
+                s.Clear();
+            }
         }
 
         

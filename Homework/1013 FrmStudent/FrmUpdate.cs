@@ -20,17 +20,24 @@ namespace Homework._1013_FrmStudent
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FrmStudent stu = new FrmStudent();
             int newNo, newChi, newEng, newMat;
             int.TryParse(this.textBox1.Text, out newNo);
             int.TryParse(this.textBox2.Text, out newChi);
             int.TryParse(this.textBox3.Text, out newEng);
             int.TryParse(this.textBox4.Text, out newMat);
-            stu.stuList[stu.stuList.Count - newNo].Chinese = newChi;
-            stu.stuList[stu.stuList.Count - newNo].English = newEng;
-            stu.stuList[stu.stuList.Count - newNo].Math = newMat;
-            stu.stuList[stu.stuList.Count - newNo].Display = true;
-
+            if (clsStudent.student.stuList.Count > 1 && newNo <= clsStudent.student.stuList.Count)
+            {
+                clsStudent.student.stuList[clsStudent.student.stuList.Count - newNo].Chinese = newChi;
+                clsStudent.student.stuList[clsStudent.student.stuList.Count - newNo].English = newEng;
+                clsStudent.student.stuList[clsStudent.student.stuList.Count - newNo].Math = newMat;
+                clsStudent.student.Printtext();
+            }
+            else
+            {
+                MessageBox.Show("Input Wrong!");
+            }
+           
+            
         }
 
         private void textBox_MouseClick(object sender, MouseEventArgs e)

@@ -23,20 +23,26 @@ namespace Lab_02__Y_
             "Marian","Tonya","Yolanda","Vivian","Paula","Rachel","Christina","Karen","Upton","Sam","Quentin","Fabian",
             "Antony","Edward","Miranda","Wesley","Joyce","Xenia","Addison","Ryan","Aidan","Wilson","Colin","Damon","Kenny",
             "Evan","Nick","Alfredo"};
-        string s1 = string.Format(" {0}\t{1}\t{2}\t{3}\t{4}\r\n", "No. ", "Name", "Chinese", "English", "Math");
-        string s3 = string.Format(" {0}\t{1}\t{2}\t{3}\t{4}\r\n", " ", " ", " ", " ", " ");
+        internal string s1 = string.Format(" {0}\t{1}\t{2}\t{3}\t{4}\r\n", "No. ", "Name", "Chinese", "English", "Math");
+        FrmUpdate f = new FrmUpdate();
         public FrmStudent()
         {
             InitializeComponent();
-            this.button3.Enabled = this.toolStripButton2.Enabled = this.toolStripButton11.Enabled = false;
+            this.button3.Enabled = this.toolStripButton2.Enabled = this.toolStripButton11.Enabled = this.button8.Enabled= false;
             this.textbox5.Text = s1;
+            clsStudent.student = this;
            
         }
 
         private void Addstu_Click(object sender, EventArgs e)
         {
+            if (this.textBox1.Text == "")
+            {
+                MessageBox.Show("Please Input Name!");
+                return;
+            }
             this.AddStudent();
-            this.button3.Enabled = this.toolStripButton2.Enabled = true;
+            this.button3.Enabled = this.toolStripButton2.Enabled = this.button8.Enabled = true;
         }
 
         private void Summery_Click(object sender, EventArgs e)
@@ -54,14 +60,14 @@ namespace Lab_02__Y_
         {
             int Addrandom = 20;
             this.RandomAddStudent(Addrandom);
-            this.button3.Enabled = this.toolStripButton2.Enabled = true;
+            this.button3.Enabled = this.toolStripButton2.Enabled = this.button8.Enabled = true;
         }
 
         private void Add1Random_Click(object sender, EventArgs e)
         {
             int Addrandom = 1;
             this.RandomAddStudent(Addrandom);
-            this.button3.Enabled = this.toolStripButton2.Enabled = true;
+            this.button3.Enabled = this.toolStripButton2.Enabled = this.button8.Enabled = true;
         }
 
         private void Clear_Click(object sender, EventArgs e)
@@ -71,7 +77,7 @@ namespace Lab_02__Y_
             highestCh = highestEn = highestMa = 0;
             this.textbox5.Text = s1;
             this.stuList.Clear();
-            this.button3.Enabled = this.toolStripButton2.Enabled = false;
+            this.button3.Enabled = this.toolStripButton2.Enabled = this.button8.Enabled= false;
         }
 
         private void textBox_MouseClick(object sender, MouseEventArgs e)
@@ -79,7 +85,7 @@ namespace Lab_02__Y_
             ((TextBox)sender).SelectAll();
         }
         void AddStudent()
-        {
+        {            
             clsStudent stu = new clsStudent();
             int Chi, Mat, Eng;
             int.TryParse(this.textBox2.Text, out Chi);
@@ -198,7 +204,21 @@ namespace Lab_02__Y_
         }
         void Summery()
         {
+            this.Printtext();
+            this.textbox5.Text += "==========================================\r\n";
+            this.Sum();
+            this.heighest();
+            this.textbox5.Text += string.Format(" {0}\t{1}\t{2}\t{3}\t{4}\r\n", " Sum ", "= ", this.C, this.E, this.M);
+            this.textbox5.Text += string.Format(" {0}\t{1}\t{2}\t{3}\t{4}\r\n", " Average ", "= ", this.Average(C), this.Average(E), this.Average(M));
+            this.textbox5.Text += string.Format(" {0}{1}\t{2}\t{3}\t{4}\r\n", " Heighest= ", " ", this.highestCh, this.highestEn, this.highestMa); 
+        }
+        internal void Printtext()
+        {
             this.textbox5.Text = s1;
+            if (this.stuList.Count < 1)
+            {
+                return;
+            }
             for (int i = this.stuList.Count - 1; i >= 0; i--)
             {
                 if (stuList[i].Display == true)
@@ -207,27 +227,29 @@ namespace Lab_02__Y_
                     this.textbox5.Text += s2;
                 }
             }
-            this.textbox5.Text += "==========================================\r\n";
-            this.Sum();
-            this.heighest();
-            this.textbox5.Text += string.Format(" {0}\t{1}\t{2}\t{3}\t{4}\r\n", " Sum ", "= ", this.C, this.E, this.M);
-            this.textbox5.Text += string.Format(" {0}\t{1}\t{2}\t{3}\t{4}\r\n", " Average ", "= ", this.Average(C), this.Average(E), this.Average(M));
-            this.textbox5.Text += string.Format(" {0}{1}\t{2}\t{3}\t{4}\r\n", " Heighest= ", " ", this.highestCh, this.highestEn, this.highestMa); 
         }
 
         private void Insert_Click(object sender, EventArgs e)
         {
+            if (this.textBox1.Text == "")
+            {
+                MessageBox.Show("Please Input Name!");
+                return;                
+            }
             this.InsertStudent();
             this.button3.Enabled = this.toolStripButton2.Enabled = true;
+
         }
 
         private void Remove_Click(object sender, EventArgs e)
         {
-            int x;
-            int.TryParse(this.textBox6.Text, out x);
-            this.stuList[this.stuList.Count - x].Display=false;
-           //this.textbox5.Text= this.textbox5.Text.Remove(this.textbox5.SelectionStart, this.textbox5.SelectionLength);
-           
+            if (this.stuList.Count >= 1)
+            {
+                int x;
+                int.TryParse(this.textBox6.Text, out x);
+                this.stuList[this.stuList.Count - x].Display = false;
+                this.Printtext();
+            }
         }
 
         private void textBox6_TextChanged(object sender, EventArgs e)
@@ -235,7 +257,7 @@ namespace Lab_02__Y_
             this.toolStripButton11.Enabled = true;
            
         }
-        FrmUpdate f = new FrmUpdate();
+        
         private void button8_Click(object sender, EventArgs e)
         {
             if (f.IsDisposed == true)

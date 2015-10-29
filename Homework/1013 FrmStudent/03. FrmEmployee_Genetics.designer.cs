@@ -40,6 +40,7 @@
             this.toolStripButton13 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton14 = new System.Windows.Forms.ToolStripButton();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.button8 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
@@ -59,7 +60,6 @@
             this.Addstu = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.textbox5 = new System.Windows.Forms.TextBox();
-            this.button8 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -89,15 +89,15 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
-            this.splitContainer1.Size = new System.Drawing.Size(824, 645);
-            this.splitContainer1.SplitterDistance = 93;
+            this.splitContainer1.Size = new System.Drawing.Size(824, 596);
+            this.splitContainer1.SplitterDistance = 85;
             this.splitContainer1.SplitterWidth = 6;
             this.splitContainer1.TabIndex = 1;
             // 
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Microsoft JhengHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label6.Location = new System.Drawing.Point(64, 22);
+            this.label6.Location = new System.Drawing.Point(31, 17);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(395, 31);
             this.label6.TabIndex = 1;
@@ -114,7 +114,7 @@
             this.toolStripButton12,
             this.toolStripButton13,
             this.toolStripButton14});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 66);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 58);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(822, 25);
             this.toolStrip1.TabIndex = 0;
@@ -136,7 +136,7 @@
             this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(78, 22);
+            this.toolStripButton2.Size = new System.Drawing.Size(80, 22);
             this.toolStripButton2.Text = "Summery";
             this.toolStripButton2.Click += new System.EventHandler(this.Summery_Click);
             // 
@@ -145,7 +145,7 @@
             this.toolStripButton10.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton10.Image")));
             this.toolStripButton10.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton10.Name = "toolStripButton10";
-            this.toolStripButton10.Size = new System.Drawing.Size(56, 22);
+            this.toolStripButton10.Size = new System.Drawing.Size(57, 22);
             this.toolStripButton10.Text = "Insert";
             this.toolStripButton10.Click += new System.EventHandler(this.Insert_Click);
             // 
@@ -154,7 +154,7 @@
             this.toolStripButton11.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton11.Image")));
             this.toolStripButton11.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton11.Name = "toolStripButton11";
-            this.toolStripButton11.Size = new System.Drawing.Size(70, 22);
+            this.toolStripButton11.Size = new System.Drawing.Size(74, 22);
             this.toolStripButton11.Text = "Remove";
             this.toolStripButton11.Click += new System.EventHandler(this.Remove_Click);
             // 
@@ -163,7 +163,7 @@
             this.toolStripButton12.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton12.Image")));
             this.toolStripButton12.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton12.Name = "toolStripButton12";
-            this.toolStripButton12.Size = new System.Drawing.Size(112, 22);
+            this.toolStripButton12.Size = new System.Drawing.Size(120, 22);
             this.toolStripButton12.Text = "20 Random Add";
             this.toolStripButton12.Click += new System.EventHandler(this.Add20Random_Click);
             // 
@@ -172,7 +172,7 @@
             this.toolStripButton13.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton13.Image")));
             this.toolStripButton13.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton13.Name = "toolStripButton13";
-            this.toolStripButton13.Size = new System.Drawing.Size(106, 22);
+            this.toolStripButton13.Size = new System.Drawing.Size(113, 22);
             this.toolStripButton13.Text = "1 Random Add";
             this.toolStripButton13.Click += new System.EventHandler(this.Add1Random_Click);
             // 
@@ -181,7 +181,7 @@
             this.toolStripButton14.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton14.Image")));
             this.toolStripButton14.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton14.Name = "toolStripButton14";
-            this.toolStripButton14.Size = new System.Drawing.Size(54, 22);
+            this.toolStripButton14.Size = new System.Drawing.Size(56, 22);
             this.toolStripButton14.Text = "Clear";
             this.toolStripButton14.Click += new System.EventHandler(this.Clear_Click);
             // 
@@ -220,14 +220,24 @@
             this.splitContainer2.Panel2.AutoScroll = true;
             this.splitContainer2.Panel2.Controls.Add(this.button4);
             this.splitContainer2.Panel2.Controls.Add(this.textbox5);
-            this.splitContainer2.Size = new System.Drawing.Size(824, 546);
+            this.splitContainer2.Size = new System.Drawing.Size(824, 505);
             this.splitContainer2.SplitterDistance = 271;
             this.splitContainer2.SplitterWidth = 6;
             this.splitContainer2.TabIndex = 0;
             // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(61, 395);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(155, 30);
+            this.button8.TabIndex = 21;
+            this.button8.Text = "Update";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(36, 270);
+            this.button2.Location = new System.Drawing.Point(168, 242);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 30);
             this.button2.TabIndex = 20;
@@ -265,7 +275,7 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(61, 507);
+            this.button7.Location = new System.Drawing.Point(61, 539);
             this.button7.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(155, 30);
@@ -276,7 +286,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(61, 471);
+            this.button6.Location = new System.Drawing.Point(61, 467);
             this.button6.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(155, 30);
@@ -287,7 +297,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(61, 435);
+            this.button5.Location = new System.Drawing.Point(61, 431);
             this.button5.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(155, 30);
@@ -378,7 +388,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(60, 398);
+            this.button3.Location = new System.Drawing.Point(60, 503);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(156, 30);
@@ -389,7 +399,7 @@
             // 
             // Addstu
             // 
-            this.Addstu.Location = new System.Drawing.Point(60, 360);
+            this.Addstu.Location = new System.Drawing.Point(60, 359);
             this.Addstu.Margin = new System.Windows.Forms.Padding(4);
             this.Addstu.Name = "Addstu";
             this.Addstu.Size = new System.Drawing.Size(156, 30);
@@ -421,22 +431,12 @@
             this.textbox5.TabIndex = 11;
             this.textbox5.WordWrap = false;
             // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(168, 270);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 30);
-            this.button8.TabIndex = 21;
-            this.button8.Text = "Update";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
-            // 
             // FrmStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(824, 645);
+            this.ClientSize = new System.Drawing.Size(824, 596);
             this.Controls.Add(this.splitContainer1);
             this.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -487,10 +487,10 @@
         private System.Windows.Forms.ToolStripButton toolStripButton14;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textbox5;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button8;
+        internal System.Windows.Forms.TextBox textbox5;
     }
 }
