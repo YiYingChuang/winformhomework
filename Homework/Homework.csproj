@@ -45,6 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmHomework.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHomework.designer.cs">
+      <DependentUpon>FrmHomework.cs</DependentUpon>
+    </Compile>
     <Compile Include="1005 FrmLoan\claLoan.cs" />
     <Compile Include="1005 FrmLoan\FrmLoan.cs">
       <SubType>Form</SubType>
@@ -127,6 +133,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmHomework.resx">
+      <DependentUpon>FrmHomework.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="1005 FrmLoan\FrmLoan.resx">
       <DependentUpon>FrmLoan.cs</DependentUpon>
     </EmbeddedResource>

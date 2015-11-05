@@ -11,13 +11,13 @@ using System.Windows.Forms;
 
 namespace Lab_02__Y_
 {
-    public partial class FrmDragDrop : Form
+    public partial class FrmMyPictureViewer : Form
     {
         List<Control> ShowPicture = new List<Control>();
         List<string> s = new List<string>();
         int t = 0;
         int h, w;
-        public FrmDragDrop()
+        public FrmMyPictureViewer()
         {
             InitializeComponent();
             this.pictureBox1.AllowDrop = true;
